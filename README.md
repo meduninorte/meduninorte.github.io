@@ -120,31 +120,32 @@ Depois de editar o `links.js`, salve e aperte **F5** no navegador para ver a mud
 
 **Se a página aparecer sem nenhum link**, provavelmente faltou uma aspa `"`, uma vírgula `,` ou uma chave `{ }` no `links.js`. Confira o bloco que você mexeu por último.
 
-## 9. Como publicar / atualizar
+## 9. Onde a página está publicada
 
-### Jeito mais fácil: Netlify Drop
+A página fica no **GitHub Pages** (gratuito, não gasta créditos do Netlify):
 
-1. Acesse **https://app.netlify.com/drop** e entre na sua conta.
-2. Arraste **a pasta inteira** `links-atletica` para a área indicada.
-3. O Netlify cria um endereço (ex.: `algo-aleatorio.netlify.app`). Em **Site configuration → Change site name** você pode trocar para algo como `medicinauninorte-links.netlify.app`.
-4. Coloque esse endereço na BIO do Instagram.
+**https://advgiovanasorgato-dev.github.io/links-atletica/**
 
-**Para atualizar depois:** entre no site no Netlify → aba **Deploys** → arraste a pasta de novo na área "Need to update your site? Drag and drop your site output folder here". O endereço continua o mesmo.
+É esse endereço que vai na BIO do Instagram.
 
-> Atenção: no plano gratuito do Netlify cada publicação gasta créditos (a mesma conta do app da Atlética). Faça todas as alterações de uma vez e publique uma vez só.
+## 10. Como atualizar os links (jeito mais fácil, até pelo celular)
 
-### Alternativa sem créditos: GitHub Pages
+1. Entre em **https://github.com/advgiovanasorgato-dev/links-atletica** (logada na sua conta).
+2. Clique no arquivo **`links.js`**.
+3. Clique no **lápis** (✏️ "Edit this file") no canto direito.
+4. Faça a alteração (trocar URL, nome, adicionar, excluir, destaque — igual às instruções acima).
+5. Clique no botão verde **"Commit changes..."** e depois em **"Commit changes"** de novo.
+6. Espere **1 a 2 minutos** e abra a página. A mudança já está no ar.
 
-Se preferir, a mesma pasta pode ser publicada de graça no GitHub Pages (um repositório com esses arquivos → Settings → Pages → Branch `main`). Não gasta créditos a cada atualização.
+Não precisa arrastar pasta nem fazer mais nada. O GitHub publica sozinho.
 
-### Depois de publicar (opcional, 1 minuto)
+> Dica: se a página não mudou, aperte F5 (ou feche e abra de novo no celular). Às vezes o navegador guarda a versão antiga por alguns minutos.
 
-Para a imagem aparecer bonita quando alguém manda o link no WhatsApp, abra o `index.html` e troque a linha:
+**Se a página ficar sem links** depois de uma edição, faltou uma aspa, vírgula ou chave. Abra o `links.js` de novo no GitHub e confira o trecho que você mexeu.
 
-```html
-  <meta property="og:image" content="assets/og-image.jpg">
-```
-pelo endereço completo do seu site, por exemplo:
-```html
-  <meta property="og:image" content="https://medicinauninorte-links.netlify.app/assets/og-image.jpg">
-```
+## 11. Como trocar a logo pelo GitHub
+
+1. No repositório, entre na pasta **`assets`**.
+2. Clique em **"Add file" → "Upload files"**.
+3. Arraste a nova imagem **com o nome `logo.jpg`** (ela substitui a antiga).
+4. Clique em **"Commit changes"**.
