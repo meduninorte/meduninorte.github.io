@@ -61,7 +61,7 @@ body::before {
   min-height: 100vh;
   min-height: 100dvh;
   margin: 0 auto;
-  padding: 52px 22px calc(28px + env(safe-area-inset-bottom));
+  padding: 26px 18px calc(28px + env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
 }
@@ -70,21 +70,21 @@ body::before {
 
 .topo {
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: 22px;
 }
 
 .logo-moldura {
   display: inline-block;
-  padding: 7px;
-  margin-bottom: 26px;
+  padding: 5px;
+  margin-bottom: 14px;
   border: 1px solid var(--dourado-suave);
   border-radius: 50%;
 }
 
 .logo {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
 }
 
@@ -97,7 +97,7 @@ body::before {
 
 .nome__sigla {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.5em;
@@ -118,7 +118,7 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin: 18px 0 0;
+  margin: 10px 0 0;
   font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.38em;
@@ -158,8 +158,8 @@ body::before {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-height: 80px;
-  padding: 18px 4px;
+  min-height: 74px;
+  padding: 13px 2px;
   color: var(--branco);
   text-decoration: none;
   transition: background-color 0.25s ease;
@@ -186,12 +186,13 @@ body::before {
 
 .link__foto {
   flex-shrink: 0;
-  width: 46px;
-  height: 46px;
+  width: 54px;
+  height: 54px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: var(--azul-claro);
+  transition: transform 0.15s ease;
 }
 
 .link--destaque .link__foto {
@@ -234,8 +235,8 @@ body::before {
   flex-shrink: 0;
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 50%;
   color: var(--branco);
@@ -291,7 +292,11 @@ body::before {
 }
 
 .link:active {
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.link:active .link__foto {
+  transform: scale(0.96);
 }
 
 .link:active .link__seta {
@@ -318,7 +323,7 @@ body::before {
 
 .rodape {
   margin-top: auto;
-  padding-top: 64px;
+  padding-top: 40px;
   text-align: center;
   font-size: 10px;
   font-weight: 500;
@@ -367,7 +372,16 @@ body::before {
 
 @media (min-width: 600px) {
   .page {
-    padding-top: 80px;
+    padding: 80px 22px 28px;
+  }
+
+  .topo {
+    margin-bottom: 44px;
+  }
+
+  .logo-moldura {
+    padding: 7px;
+    margin-bottom: 26px;
   }
 
   .logo {
@@ -375,13 +389,25 @@ body::before {
     height: 168px;
   }
 
+  .nome__sigla {
+    margin-bottom: 10px;
+  }
+
+  .subtitulo {
+    margin-top: 18px;
+  }
+
+  .rodape {
+    padding-top: 64px;
+  }
+
   .nome__principal {
     font-size: 30px;
   }
 
   .link {
-    padding-left: 12px;
-    padding-right: 12px;
+    min-height: 84px;
+    padding: 18px 12px;
     gap: 18px;
   }
 
@@ -396,8 +422,8 @@ body::before {
   }
 
   .link__foto {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
   }
 }
 

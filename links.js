@@ -33,7 +33,7 @@ const links = [
     titulo: "INSCRIÇÃO BEACH MED",
     url: "https://forms.gle/XJhaUUZn6xLmzY5v6",
     foto: "assets/fotos/beach-med.jpg",
-    destaque: true
+    destaque: false
   },
 
   {
@@ -64,7 +64,7 @@ const links = [
     categoria: "MÁXIMO NUNEZ",
     titulo: "FALAR COM A ATLÉTICA",
     url: "https://wa.me/5567992660894",
-    foto: "assets/fotos/contato.jpg",
+    foto: "assets/fotos/whatsapp.svg",
     destaque: false
   },
 
