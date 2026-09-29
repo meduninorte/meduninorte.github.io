@@ -149,3 +149,37 @@ Não precisa arrastar pasta nem fazer mais nada. O GitHub publica sozinho.
 2. Clique em **"Add file" → "Upload files"**.
 3. Arraste a nova imagem **com o nome `logo.jpg`** (ela substitui a antiga).
 4. Clique em **"Commit changes"**.
+
+## 12. Como colocar foto em um link (opcional)
+
+Cada link pode ter uma **miniatura quadrada** à esquerda (no lugar do número 01, 02...).
+
+**1. Envie a foto para o GitHub**
+1. No repositório, entre em **`assets`** → **`fotos`**.
+2. Clique em **"Add file" → "Upload files"** e arraste a foto.
+3. Clique em **"Commit changes"**.
+
+Dicas para a foto:
+- **Quadrada** (se não for, a página corta as bordas).
+- Tamanho pequeno: **300 × 300 pixels** é suficiente.
+- Nome **sem espaço e sem acento**, ex.: `beach-med.jpg`, `hermosa.jpg`.
+
+**2. Ligue a foto ao link no `links.js`**
+
+Adicione a linha `foto:` dentro do bloco do link:
+
+```js
+  {
+    categoria: "BEACH MED",
+    titulo: "INSCRIÇÃO BEACH MED",
+    url: "https://forms.gle/XJhaUUZn6xLmzY5v6",
+    foto: "assets/fotos/beach-med.jpg",
+    destaque: true
+  },
+```
+
+O nome precisa ser **exatamente igual** ao arquivo enviado (inclusive `.jpg` ou `.png`, maiúsculas e minúsculas).
+
+Para tirar a foto, apague a linha `foto:`. O link volta a mostrar o número.
+
+> Fica mais bonito quando **todos** os links têm foto, ou **nenhum**.

@@ -1,0 +1,2 @@
+Coloque aqui as fotos dos links (quadradas, JPG, ate 300x300 pixels).
+Depois use em links.js:  foto: "assets/fotos/nome-da-foto.jpg",

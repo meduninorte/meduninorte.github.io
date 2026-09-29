@@ -69,6 +69,18 @@
         a.href = item.url;
         a.rel = "noopener";
 
+        if (item.foto) {
+          var foto = document.createElement("img");
+          foto.className = "link__foto";
+          foto.src = item.foto;
+          foto.alt = "";
+          foto.loading = "lazy";
+          foto.width = 52;
+          foto.height = 52;
+          a.classList.add("link--com-foto");
+          a.appendChild(foto);
+        }
+
         var textos = document.createElement("span");
         textos.className = "link__textos";
 

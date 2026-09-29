@@ -16,6 +16,10 @@
   destaque   -> true = detalhe dourado (evento atual)
                 false = link normal
 
+  foto       -> OPCIONAL. Miniatura quadrada ao lado do link.
+                Ex: foto: "assets/fotos/beach-med.jpg",
+                Sem a linha foto, o link mostra o número (01, 02...).
+
   ATENÇÃO:
   - Mantenha as aspas "  " em volta dos textos e do link.
   - Mantenha a vírgula depois de cada }  (a última pode ter ou não).
