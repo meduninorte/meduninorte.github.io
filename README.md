@@ -124,13 +124,13 @@ Depois de editar o `links.js`, salve e aperte **F5** no navegador para ver a mud
 
 A página fica no **GitHub Pages** (gratuito, não gasta créditos do Netlify):
 
-**https://advgiovanasorgato-dev.github.io/links-atletica/**
+**https://meduninorte.github.io/**
 
 É esse endereço que vai na BIO do Instagram.
 
 ## 10. Como atualizar os links (jeito mais fácil, até pelo celular)
 
-1. Entre em **https://github.com/advgiovanasorgato-dev/links-atletica** (logada na sua conta).
+1. Entre em **https://github.com/meduninorte/meduninorte.github.io** (logada na sua conta).
 2. Clique no arquivo **`links.js`**.
 3. Clique no **lápis** (✏️ "Edit this file") no canto direito.
 4. Faça a alteração (trocar URL, nome, adicionar, excluir, destaque — igual às instruções acima).
