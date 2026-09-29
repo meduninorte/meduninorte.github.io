@@ -60,4 +60,12 @@ const links = [
     destaque: false
   },
 
+  {
+    categoria: "MÁXIMO NUNEZ",
+    titulo: "FALAR COM A ATLÉTICA",
+    url: "https://wa.me/5567992660894",
+    foto: "assets/fotos/contato.jpg",
+    destaque: false
+  },
+
 ];
