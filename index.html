@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>A.A.A. Medicina UNINORTE | Links Oficiais</title>
+  <meta name="description" content="Links oficiais da A.A.A. Medicina UNINORTE — Pedro Juan Caballero, PY. Inscrições, ingressos e app da Atlética.">
+  <meta name="theme-color" content="#0a1530">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://advgiovanasorgato-dev.github.io/links-atletica/">
+  <meta property="og:title" content="A.A.A. Medicina UNINORTE | Links Oficiais">
+  <meta property="og:description" content="Inscrições, ingressos e app da Atlética.">
+  <meta property="og:image" content="https://advgiovanasorgato-dev.github.io/links-atletica/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topo">
+      <span class="logo-moldura">
+        <img class="logo" src="assets/logo.jpg" width="440" height="440"
+           alt="Logo da A.A.A. Medicina UNINORTE">
+      </span>
+      <h1 class="nome">
+        <span class="nome__sigla">A.A.A.</span>
+        <span class="nome__principal">Medicina UNINORTE</span>
+      </h1>
+      <p class="subtitulo">Links oficiais</p>
+    </header>
+
+    <main>
+      <!-- Os links são criados automaticamente a partir do arquivo links.js -->
+      <ul class="links" id="lista-links"></ul>
+      <noscript>
+        <p class="aviso">Ative o JavaScript para ver os links.</p>
+      </noscript>
+    </main>
+
+    <footer class="rodape">
+      <p>A.A.A. Medicina UNINORTE</p>
+      <p>Pedro Juan Caballero • PY</p>
+    </footer>
+  </div>
+
+  <script src="links.js"></script>
+  <script>
+    (function () {
+      var lista = document.getElementById("lista-links");
+      if (typeof links === "undefined" || !Array.isArray(links)) return;
+
+      links.forEach(function (item) {
+        if (!item || !item.url) return;
+
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.className = "link" + (item.destaque === true ? " link--destaque" : "");
+        a.href = item.url;
+        a.rel = "noopener";
+
+        var textos = document.createElement("span");
+        textos.className = "link__textos";
+
+        if (item.categoria) {
+          var cat = document.createElement("span");
+          cat.className = "link__categoria";
+          cat.textContent = item.categoria;
+          textos.appendChild(cat);
+        }
+
+        var titulo = document.createElement("span");
+        titulo.className = "link__titulo";
+        titulo.textContent = item.titulo || item.url;
+        textos.appendChild(titulo);
+
+        var seta = document.createElement("span");
+        seta.className = "link__seta";
+        seta.setAttribute("aria-hidden", "true");
+        seta.innerHTML = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9 3l5 5-5 5"/></svg>';
+
+        a.appendChild(textos);
+        a.appendChild(seta);
+        li.appendChild(a);
+        lista.appendChild(li);
+      });
+    })();
+  </script>
+</body>
+</html>

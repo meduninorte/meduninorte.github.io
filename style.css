@@ -1,0 +1,382 @@
+/* ==========================================
+   A.A.A. MEDICINA UNINORTE — Links oficiais
+   ========================================== */
+
+:root {
+  --azul: #08122b;          /* fundo — azul-marinho da logo */
+  --azul-claro: #12214a;
+  --dourado: #f2b91c;       /* amarelo/dourado da logo */
+  --dourado-suave: rgba(242, 185, 28, 0.55);
+  --branco: #ffffff;
+  --texto-suave: rgba(255, 255, 255, 0.58);
+  --texto-fraco: rgba(255, 255, 255, 0.34);
+  --divisor: rgba(255, 255, 255, 0.1);
+
+  --fonte: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: var(--azul);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--azul);
+  background-image:
+    /* granulado quase invisível, dá acabamento de impresso */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    /* leve claridade atrás da logo */
+    radial-gradient(ellipse 70% 360px at 50% 0, var(--azul-claro), transparent 80%);
+  background-repeat: repeat, no-repeat;
+  color: var(--branco);
+  font-family: var(--fonte);
+  font-stretch: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* filete dourado no topo, como o anel da logo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--dourado);
+  z-index: 1;
+}
+
+.page {
+  width: 100%;
+  max-width: 540px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 52px 22px calc(28px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Topo ---------- */
+
+.topo {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.logo-moldura {
+  display: inline-block;
+  padding: 7px;
+  margin-bottom: 26px;
+  border: 1px solid var(--dourado-suave);
+  border-radius: 50%;
+}
+
+.logo {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.nome {
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.nome__sigla {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em; /* compensa o espaçamento da última letra */
+  color: var(--texto-suave);
+}
+
+.nome__principal {
+  display: block;
+  font-size: 21px;
+  font-weight: 800;
+  font-stretch: 125%;
+  letter-spacing: 0.02em;
+}
+
+.subtitulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 0;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--dourado);
+}
+
+.subtitulo::before,
+.subtitulo::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--dourado-suave);
+}
+
+.subtitulo::after {
+  margin-left: -0.38em;
+}
+
+/* ---------- Links ---------- */
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--divisor);
+  counter-reset: item;
+}
+
+.links li {
+  border-bottom: 1px solid var(--divisor);
+  counter-increment: item;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 80px;
+  padding: 18px 4px;
+  color: var(--branco);
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+/* número 01, 02, 03... gerado automaticamente */
+.link::before {
+  content: counter(item, decimal-leading-zero);
+  flex-shrink: 0;
+  width: 22px;
+  align-self: flex-start;
+  padding-top: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--texto-fraco);
+}
+
+.link__textos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.link__categoria {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.link__titulo {
+  font-size: 15px;
+  font-weight: 700;
+  font-stretch: 100%;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  transition: transform 0.25s ease;
+}
+
+.link__seta {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  color: var(--branco);
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.link__seta svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.25s ease;
+}
+
+/* Destaque (destaque: true em links.js) */
+.link--destaque::before,
+.link--destaque .link__categoria {
+  color: var(--dourado);
+}
+
+.link--destaque .link__seta {
+  border-color: var(--dourado);
+  color: var(--dourado);
+}
+
+.link--destaque::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--dourado), transparent 85%);
+}
+
+/* Interações */
+@media (hover: hover) {
+  .link:hover {
+    background-color: rgba(255, 255, 255, 0.025);
+  }
+
+  .link:hover .link__titulo {
+    transform: translateX(3px);
+  }
+
+  .link:hover .link__seta {
+    background-color: var(--dourado);
+    border-color: var(--dourado);
+    color: var(--azul);
+  }
+
+  .link:hover .link__seta svg {
+    transform: translateX(2px);
+  }
+}
+
+.link:active {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.link:active .link__seta {
+  background-color: var(--dourado);
+  border-color: var(--dourado);
+  color: var(--azul);
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--dourado);
+  outline-offset: 2px;
+}
+
+.aviso {
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+  margin-top: auto;
+  padding-top: 64px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--texto-fraco);
+}
+
+.rodape::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 0 auto 18px;
+  background: var(--dourado);
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+.rodape p {
+  margin: 0;
+  line-height: 2;
+}
+
+/* ---------- Entrada suave ---------- */
+
+@keyframes surgir {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.topo,
+.links li,
+.rodape {
+  animation: surgir 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.links li:nth-child(1) { animation-delay: 0.08s; }
+.links li:nth-child(2) { animation-delay: 0.14s; }
+.links li:nth-child(3) { animation-delay: 0.2s; }
+.links li:nth-child(4) { animation-delay: 0.26s; }
+.links li:nth-child(n+5) { animation-delay: 0.32s; }
+.rodape { animation-delay: 0.36s; }
+
+/* ---------- Telas maiores ---------- */
+
+@media (min-width: 600px) {
+  .page {
+    padding-top: 80px;
+  }
+
+  .logo {
+    width: 168px;
+    height: 168px;
+  }
+
+  .nome__principal {
+    font-size: 30px;
+  }
+
+  .link {
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 18px;
+  }
+
+  .link__titulo {
+    font-size: 17px;
+    font-stretch: 108%;
+  }
+
+  .link__seta {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
