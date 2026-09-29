@@ -198,6 +198,11 @@ body::before {
   border-color: var(--dourado);
 }
 
+.link--com-foto .link__titulo {
+  font-stretch: 88%;
+  letter-spacing: 0.01em;
+}
+
 .link__textos {
   flex: 1;
   display: flex;

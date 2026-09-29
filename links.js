@@ -32,6 +32,7 @@ const links = [
     categoria: "BEACH MED",
     titulo: "INSCRIÇÃO BEACH MED",
     url: "https://forms.gle/XJhaUUZn6xLmzY5v6",
+    foto: "assets/fotos/beach-med.jpg",
     destaque: true
   },
 
@@ -39,6 +40,7 @@ const links = [
     categoria: "HERMOSA PARTY",
     titulo: "INGRESSOS HERMOSA PARTY",
     url: "https://appingressos.com.br/hermosa-party-2026__25854/?utm_source=promoter&utm_campaign=atleticas",
+    foto: "assets/fotos/hermosa.jpg",
     destaque: false
   },
 
@@ -46,6 +48,7 @@ const links = [
     categoria: "ALL BLACK PARTY",
     titulo: "INGRESSOS ALL BLACK PARTY",
     url: "https://cheers.com.br/evento/all-black-party-b-day-bk-dj-pbeats-36310?promoter=254488",
+    foto: "assets/fotos/all-black.jpg",
     destaque: false
   },
 
@@ -53,6 +56,7 @@ const links = [
     categoria: "ATLÉTICA",
     titulo: "APP DA ATLÉTICA",
     url: "https://warm-raindrop-812e86.netlify.app",
+    foto: "assets/fotos/app.jpg",
     destaque: false
   },
 
