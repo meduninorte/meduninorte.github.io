@@ -29,6 +29,14 @@
 const links = [
 
   {
+    categoria: "OCTUBRE ROSA",
+    titulo: "INSCRIÇÃO OCTUBRE ROSA",
+    url: "https://inscripciones-octubre-rosa.netlify.app",
+    foto: "assets/fotos/octubre-rosa.png",
+    destaque: true
+  },
+
+  {
     categoria: "BEACH MED",
     titulo: "INSCRIÇÃO BEACH MED",
     url: "https://forms.gle/XJhaUUZn6xLmzY5v6",
