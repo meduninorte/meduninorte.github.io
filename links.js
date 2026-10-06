@@ -32,7 +32,7 @@ const links = [
     categoria: "OCTUBRE ROSA",
     titulo: "INSCRIÇÃO OCTUBRE ROSA",
     url: "https://inscripciones-octubre-rosa.netlify.app",
-    foto: "assets/fotos/octubre-rosa.png",
+    foto: "assets/octubre-rosa.png",
     destaque: true
   },
 
